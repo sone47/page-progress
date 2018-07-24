@@ -5,11 +5,16 @@ progress.id = 'chrome-extension-progress';
 
 body.appendChild(progress);
 
-window.addEventListener('scroll', () => {
-  getUserScrollScale();
+chrome.runtime.onMessage.addListener((req) => {
+  if(req.open) {
+    window.addEventListener('scroll', getUserScrollScale);
+    getUserScrollScale();
+    progress.style.display = 'block';
+  } else {
+    window.removeEventListener('scroll', getUserScrollScale);
+    progress.style.display = 'none';
+  }
 });
-
-getUserScrollScale();
 
 function getUserScrollScale() {
   const top = document.documentElement.scrollTop,

@@ -2,7 +2,7 @@
   "name": "Page Progress",
   "version": "1.0.0",
   "description": "A simple google extension for getting reading progress on page.",
-  "permissions": ["activeTab", "declarativeContent", "storage"],
+  "permissions": ["tabs", "activeTab", "declarativeContent", "storage"],
   "background": {
     "scripts": ["background.js"],
     "persistent": false
