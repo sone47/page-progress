@@ -1,0 +1,29 @@
+#switch {
+  width: 60px;
+  height: 30px;
+  border: 2px solid;
+  border-radius: 30px;
+  border-color: rgba(0, 0, 0, 0.25);
+  background-color: rgba(0, 0, 0, 0.25);
+  position: relative;
+}
+
+#switch:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #fff;
+}
+
+#switch.open {
+  background-color: #1890ff;
+  border-color: #1890ff;
+}
+#switch.open:before {
+  left: unset;
+  right: 0;
+}

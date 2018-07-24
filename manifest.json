@@ -7,6 +7,9 @@
     "scripts": ["background.js"],
     "persistent": false
   },
+  "page_action": {
+    "default_popup": "Popup/index.html"
+  },
   "content_scripts": [
     {
       "matches": ["<all_urls>"],
