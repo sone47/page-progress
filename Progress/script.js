@@ -1,10 +1,11 @@
-const progress = document.createElement('div');
 const body = document.body;
 
+// create progress
+const progress = document.createElement('div');
 progress.id = 'chrome-extension-progress';
-
 body.appendChild(progress);
 
+// get switch state
 chrome.runtime.onMessage.addListener((req) => {
   if(req.open) {
     window.addEventListener('scroll', getUserScrollScale);
@@ -16,6 +17,7 @@ chrome.runtime.onMessage.addListener((req) => {
   }
 });
 
+// scroll progress
 function getUserScrollScale() {
   const top = document.documentElement.scrollTop,
         height = document.documentElement.scrollHeight - window.innerHeight;
