@@ -4,6 +4,8 @@
   left: 0;
   width: 0;
   height: 3px;
-  background-color: blue;
+  background-color: #1890ff;
+  border-radius: 1px;
   z-index: 99999;
+  box-shadow: 2px 2px 5px 0 rgba(24, 144, 255, .2);
 }
