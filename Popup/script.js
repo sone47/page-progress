@@ -2,18 +2,19 @@ const switchBtn = document.getElementById('switch');
 const classes = switchBtn.classList;
 const openClassName = 'open';
 
-switchBtn.addEventListener('click', e => {
-  toggleProgress(classes);
-});
-
-contactContent(false);
-
+// get switch state when awake popup
 chrome.storage.sync.get('open', data => {
-  if(data.open) {
+  const open = data.open;
+  if(open) {
     classes.add(openClassName);
   } else {
     classes.remove(openClassName);
   }
+  contactContent(open);
+});
+
+switchBtn.addEventListener('click', e => {
+  toggleProgress(classes);
 });
 
 function toggleProgress(classes) {
