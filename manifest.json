@@ -18,5 +18,10 @@
       "css": ["Progress/style.css"]
     }
   ],
+  "icons": {
+    "16": "images/icon.png",
+    "48": "images/icon.png",
+    "128": "images/icon.png"
+  },
   "manifest_version": 2
 }
