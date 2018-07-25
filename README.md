@@ -1,5 +1,7 @@
 # Page Progress
 
+这是一个用来读取当前网页浏览进度的小插件，并提供了简单的开关。
+
 ## Usage
 
 将项目克隆到本地，打开 Chrome，进入 chrome://extensions/。
